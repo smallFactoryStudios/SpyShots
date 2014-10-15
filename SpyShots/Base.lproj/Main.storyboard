@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="4514" systemVersion="13C64" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="ncV-z8-z63">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3747"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller - Daily News-->
+        <scene sceneID="ufC-wZ-h7g">
+            <objects>
+                <viewController id="vXZ-lx-hvc" customClass="SFSViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JzO-J2-0Zn"/>
+                        <viewControllerLayoutGuide type="bottom" id="dck-P0-KXM"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="screen.png" translatesAutoresizingMaskIntoConstraints="NO" id="h4p-M7-8wy">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                            </imageView>
+                            <adBannerView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" alpha="0.0" contentMode="center" translatesAutoresizingMaskIntoConstraints="NO" id="cHA-gB-CCX">
+                                <rect key="frame" x="0.0" y="518" width="320" height="50"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="OPk-Ng-DOd"/>
+                                </constraints>
+                                <connections>
+                                    <outlet property="delegate" destination="vXZ-lx-hvc" id="yFL-Ae-VKF"/>
+                                </connections>
+                            </adBannerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="cHA-gB-CCX" secondAttribute="trailing" id="1NC-FL-ijF"/>
+                            <constraint firstItem="dck-P0-KXM" firstAttribute="top" secondItem="cHA-gB-CCX" secondAttribute="bottom" id="ARE-hb-g8n"/>
+                            <constraint firstItem="dck-P0-KXM" firstAttribute="top" secondItem="cHA-gB-CCX" secondAttribute="bottom" id="H5g-aX-wQY"/>
+                            <constraint firstItem="cHA-gB-CCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="LKX-xs-ZoP"/>
+                            <constraint firstAttribute="trailing" secondItem="cHA-gB-CCX" secondAttribute="trailing" id="WYi-jj-dzv"/>
+                            <constraint firstItem="cHA-gB-CCX" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leading" id="tXy-hV-pwJ"/>
+                            <constraint firstItem="dck-P0-KXM" firstAttribute="top" secondItem="cHA-gB-CCX" secondAttribute="bottom" id="yax-ds-Slu"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Daily News" id="2Yl-4z-5Ci"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="664" y="109"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="LCO-3h-TKe">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="ncV-z8-z63" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="q4x-FE-yWz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="vXZ-lx-hvc" kind="relationship" relationship="rootViewController" id="xir-lp-WP2"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U02-eP-6h4" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="109"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="screen.png" width="640" height="1138"/>
+    </resources>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination" type="retina4"/>
+    </simulatedMetricsContainer>
+</document>
